@@ -1,0 +1,20 @@
+[Unit]
+Description=geoip_monitor
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=users
+WorkingDirectory=/geoip_monitor/
+ExecStart=/usr/bin/python3 /geoip_monitor/geoip_monitor.py
+SyslogIdentifier=geoip_monitor
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+RestartSec=3
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
