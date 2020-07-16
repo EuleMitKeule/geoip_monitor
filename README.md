@@ -30,6 +30,8 @@ INSTRUCTIONS:
   -ip : varchar
   -port : int
 
+6.5 Put the host and password for MariaDB in geoip_monitor.py
+
 7. Configure your iptables logging:
 
   -Run iptables -I INPUT 1 -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -j LOG --log-prefix "iptables: "
