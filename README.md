@@ -39,6 +39,8 @@ INSTRUCTIONS:
   -Put in :msg, contains, "iptables: " -/var/log/iptables.log
           & ~
   -Run systemctl restart rsyslog
+
+7.5 Put geoip_monitor.service in /etc/systemd/system/ and enable it via systemctl enable geoip_monitor
   
 8. Get the Grafana World Map Plugin
 
